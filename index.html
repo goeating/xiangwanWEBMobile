@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>享玩乐动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script>
+        document.addEventListener('DOMContentLoaded', function(e) {
+            document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        });
+        window.addEventListener('orientationchange', function(event) {
+            if (window.orientation == 180 || window.orientation == 0) {
+                document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            }
+            if (window.orientation == 90 || window.orientation == -90) {
+                 document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="./dist/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="dist/css/game.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./dist/img/banner750.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./dist/img/banner750.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./dist/img/banner750.jpg" alt="">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <ul class="type-list">
+        <li>
+            <a href="#pailei">
+                <img src="./dist/img/type-pailei.png" alt="">
+                <p>牌类</p>
+            </a>
+        </li>
+        <li>
+            <a href="#majiang">
+                <img src="./dist/img/type-majiang.png" alt="">
+                <p>麻将</p>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <img src="./dist/img/type-smallgame.png" alt="">
+                <p>小游戏</p>
+            </a>
+        </li>
+    </ul>
+
+    <a href="#" class="push-game">
+        <img src="./dist/img/ddz.png">
+        <div class="game-summary">
+            <h4>斗地主</h4>
+            <p class="game-size">33.04MB</p>
+            <p class="game-profiles">原汁原味的本地玩法</p>
+        </div>
+        <button class="push-btn">立即下载</button>
+    </a>
+
+    <div class="more-game">
+        <span>更多游戏</span>
+    </div>
+    <div class="game-wrap">
+        <div class="title">
+            <h5 id="pailei">牌类</h5>
+            <span>文明游戏，禁止赌博</span>
+        </div>
+        <ul class="game-list">
+            <li>
+                <a href="#">
+                    <img src="./dist/img/ddz.png">
+                    <h6>斗地主</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./dist/img/pdk.png">
+                    <h6>跑得快</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./dist/img/phz.png">
+                    <h6>跑胡子</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="game-wrap">
+        <div class="title">
+            <h5 id="majiang">麻将</h5>
+            <span>文明游戏，禁止赌博</span>
+        </div>
+        <ul class="game-list">
+            <li>
+                <a href="#">
+                    <img src="./dist/img/csmj.png">
+                    <h6>长沙麻将</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./dist/img/scmj.png">
+                    <h6>四川麻将</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./dist/img/zzmj.png">
+                    <h6>转转麻将</h6>
+                    <button>下载</button>
+                    <img src="./dist/img/hot.png" class="hot">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='./dist/js/swiper-3.4.2.jquery.min.js'></script>
+<script src='./dist/js/game.js'></script>
+</body>
+</html>
