@@ -98,21 +98,24 @@ ul, li {
     }
     .game-profiles {
       font-size: rem(14px);
+      height: rem(23.5px);
       line-height: rem(23.5px);
       color: #abacac;
       margin: rem(8.5px) 0 0;
     }
   }
   .push-btn {
-    width: rem(100px);
-    height: rem(40px);
-    background: #ff9c00;
-    border-radius: rem(5px);
-    text-align: center;
-    font-size: rem(18px);
-    outline: none;
-    color: #fff;
-    border: none;
+    .game-download {
+      width: rem(100px);
+      height: rem(30px);
+      line-height: rem(30px);
+    }
+    .ios{
+      top: rem(7px);
+    }
+    .android {
+      top: rem(7.5px);
+    }
   }
 }
 
@@ -168,33 +171,21 @@ ul, li {
       flex: 0 0 33.3333%;
       margin-bottom: rem(20px);
       text-align: center;
-      display: flex;
-      justify-content: center;
-      a {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+      .game-wrapper {
         position: relative;
         width: rem(95px);
-        img {
+        margin: 0 auto;
+        .game-image {
+          display: block;
+          margin: 0 auto;
           width: rem(95px);
         }
-        h6 {
+        .game-title {
           font-size: rem(14px);
           font-weight: normal;
           line-height: rem(12px);
-          margin: rem(12px) 0 rem(10px);
+          margin: rem(12px) 0 rem(8px);
           color: #666;
-        }
-        button {
-          width: rem(80px);
-          height: rem(30px);
-          color: #00b1e5;
-          border: 1px solid #00b1e5;
-          font-size: rem(14px);
-          text-align: center;
-          background: #fff;
-          border-radius: rem(5px);
         }
         .hot {
           width: rem(45.5px);
@@ -205,4 +196,54 @@ ul, li {
       }
     }
   }
+}
+.game-download {
+  display: block;
+  position: relative;
+  margin: 0 auto rem(8px);
+  width: rem(95px);
+  height: rem(40px);
+  line-height: rem(40px);
+  border-radius: rem(4px);
+  text-align: center;
+  text-indent: rem(13px);
+  border: 1px solid #ff9c00;
+  background: #ff9c00;
+  color: #fff;
+  font-size: rem(12px);
+  &:last-child{
+    margin: 0 auto;
+  }
+  &.disabled{
+    text-indent: 0;
+    background: #eee;
+    border-color: #c8c9cb;
+    color: #c8c9cb;
+    cursor: not-allowed;
+    .ios,.android{
+      z-index: -1;
+    }
+  }
+}
+.ios{
+  display: block;
+  width: rem(11px);
+  height: rem(14px);
+  position: absolute;
+  left: 50%;
+  top: rem(12px);
+  margin-left: rem(-30px);
+  background: url("../img/i_ios.png") no-repeat;
+  background-size: 100% 100%;
+}
+.android {
+  display: block;
+  width: rem(12px);
+  height: rem(13px);
+  position: absolute;
+  left: 50%;
+  top: rem(12.5px);
+  margin-left: rem(-32px);
+  background: url("../img/i_android.png") no-repeat;
+  background-size: 100% 100%;
 }

@@ -101,19 +101,18 @@ ul, li {
       color: #666; }
     .push-game .game-summary .game-profiles {
       font-size: 0.37333rem;
+      height: 0.62667rem;
       line-height: 0.62667rem;
       color: #abacac;
       margin: 0.22667rem 0 0; }
-  .push-game .push-btn {
+  .push-game .push-btn .game-download {
     width: 2.66667rem;
-    height: 1.06667rem;
-    background: #ff9c00;
-    border-radius: 0.13333rem;
-    text-align: center;
-    font-size: 0.48rem;
-    outline: none;
-    color: #fff;
-    border: none; }
+    height: 0.8rem;
+    line-height: 0.8rem; }
+  .push-game .push-btn .ios {
+    top: 0.18667rem; }
+  .push-game .push-btn .android {
+    top: 0.2rem; }
 
 .more-game {
   width: 100%;
@@ -177,50 +176,70 @@ ul, li {
           -ms-flex: 0 0 33.3333%;
               flex: 0 0 33.3333%;
       margin-bottom: 0.53333rem;
-      text-align: center;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-      .game-wrap .game-list li a {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-flow: column nowrap;
-            -ms-flex-flow: column nowrap;
-                flex-flow: column nowrap;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
+      text-align: center; }
+      .game-wrap .game-list li .game-wrapper {
         position: relative;
-        width: 2.53333rem; }
-        .game-wrap .game-list li a img {
+        width: 2.53333rem;
+        margin: 0 auto; }
+        .game-wrap .game-list li .game-wrapper .game-image {
+          display: block;
+          margin: 0 auto;
           width: 2.53333rem; }
-        .game-wrap .game-list li a h6 {
+        .game-wrap .game-list li .game-wrapper .game-title {
           font-size: 0.37333rem;
           font-weight: normal;
           line-height: 0.32rem;
-          margin: 0.32rem 0 0.26667rem;
+          margin: 0.32rem 0 0.21333rem;
           color: #666; }
-        .game-wrap .game-list li a button {
-          width: 2.13333rem;
-          height: 0.8rem;
-          color: #00b1e5;
-          border: 1px solid #00b1e5;
-          font-size: 0.37333rem;
-          text-align: center;
-          background: #fff;
-          border-radius: 0.13333rem; }
-        .game-wrap .game-list li a .hot {
+        .game-wrap .game-list li .game-wrapper .hot {
           width: 1.21333rem;
           position: absolute;
           top: 0;
           left: 0; }
+
+.game-download {
+  display: block;
+  position: relative;
+  margin: 0 auto 0.21333rem;
+  width: 2.53333rem;
+  height: 1.06667rem;
+  line-height: 1.06667rem;
+  border-radius: 0.10667rem;
+  text-align: center;
+  text-indent: 0.34667rem;
+  border: 1px solid #ff9c00;
+  background: #ff9c00;
+  color: #fff;
+  font-size: 0.32rem; }
+  .game-download:last-child {
+    margin: 0 auto; }
+  .game-download.disabled {
+    text-indent: 0;
+    background: #eee;
+    border-color: #c8c9cb;
+    color: #c8c9cb;
+    cursor: not-allowed; }
+    .game-download.disabled .ios, .game-download.disabled .android {
+      z-index: -1; }
+
+.ios {
+  display: block;
+  width: 0.29333rem;
+  height: 0.37333rem;
+  position: absolute;
+  left: 50%;
+  top: 0.32rem;
+  margin-left: -0.8rem;
+  background: url("../img/i_ios.png") no-repeat;
+  background-size: 100% 100%; }
+
+.android {
+  display: block;
+  width: 0.32rem;
+  height: 0.34667rem;
+  position: absolute;
+  left: 50%;
+  top: 0.33333rem;
+  margin-left: -0.85333rem;
+  background: url("../img/i_android.png") no-repeat;
+  background-size: 100% 100%; }
